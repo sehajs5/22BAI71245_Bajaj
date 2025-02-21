@@ -6,7 +6,7 @@ require('dotenv').config()
 
 const app = express()
 app.use(cors());
-const port = 7777
+const port = process.env.PORT || 7777
 app.use(express.json())
 async function main(){
     await mongoose.connect("mongodb+srv://sehajinsan07:qG8Ekp3UENEbRcq2@cluster0.a7sr3.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
