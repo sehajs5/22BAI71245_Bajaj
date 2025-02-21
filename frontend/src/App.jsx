@@ -22,7 +22,8 @@ const App = () => {
       }
 
       setError("");
-      const response = await axios.post("http://localhost:7777/bfhl", parsedInput);
+      const response = await axios.post("https://two2bai71245-bajaj.onrender.com/bfhl", parsedInput);
+
       setResponseData(response.data);
     } catch (err) {
       setError(err.message);
