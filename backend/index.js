@@ -12,7 +12,7 @@ app.use(cors({
 const port = 7777
 app.use(express.json())
 async function main(){
-    await mongoose.connect(process.env.DB_URL)
+    await mongoose.connect("mongodb+srv://sehajinsan07:qG8Ekp3UENEbRcq2@cluster0.a7sr3.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
 }
 main().then(()=> console.log("Aye Aye from MongoDB")).catch(err => console.log(err));
 app.get('/bfhl', (req, res) => {
